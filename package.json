@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "tslint --project '.'",
-    "start": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec ts-node src/index.ts dist/index.js",
+    "start": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec ts-node src/index.ts dist/index.js NODE_ENV=development",
     "compile": "tsc",
-    "build": "npm run compile && node dist/index.js"
+    "build": "npm run compile && node dist/index.js NODE_ENV=staging"
   },
   "keywords": [],
   "author": "Adrian Orłów <adrian[at]orlow.me>",
@@ -22,7 +22,7 @@
     "mongoose": "^5.5.3",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^0.17.2",
-    "typegoose": "^5.6.0"
+    "@hasezoey/typegoose": "^5.6.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.24",

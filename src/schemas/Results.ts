@@ -1,6 +1,6 @@
 import { Int, Field, ObjectType } from 'type-graphql';
 import { ObjectId } from 'mongodb';
-import { prop, Typegoose } from 'typegoose';
+import { prop, Typegoose } from '@hasezoey/typegoose';
 import * as mongoose from 'mongoose';
 
 import { Axes } from './Axes';

@@ -1,3 +1,4 @@
+require('dotenv').config();
 import { GraphQLServer } from 'graphql-yoga';
 import 'reflect-metadata';
 import { buildSchema } from 'type-graphql';
@@ -5,8 +6,6 @@ import * as helmet from 'helmet';
 import config from './config';
 import QuestionResolver from './resolvers/QuestionResolver';
 import ResultsResolver from './resolvers/ResultsResolver';
-
-require('dotenv').config();
 
 import mongoose = require('mongoose')
 
@@ -38,7 +37,7 @@ async function init() {
 
   server.start(config.options, ({ port, playground }) => console.log(
     `Server started, listening on port ${port} for incoming requests.
-      \nPlayground: http://localhost:${port}${playground}`,
+    ${playground ? `\nPlayground: http://localhost:${port}${playground}` : ``}`,
   ));
 }
 
