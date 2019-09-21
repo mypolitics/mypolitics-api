@@ -1,3 +1,7 @@
+![GitHub](https://img.shields.io/github/license/mypolitics/mypolitics-api)
+![David](https://img.shields.io/david/mypolitics/mypolitics-api)
+[![Code Style](https://badgen.net/badge/code%20style/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
+
 # mypolitics-api
 
 mypolitics-api is an app made with Node.js, MongoDB and TypeScript, which provides GraphQL API for [myPolitics political test](https://github.com/myPolitics/myPolitics).
