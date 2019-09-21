@@ -3,6 +3,7 @@ import { GraphQLServer } from 'graphql-yoga';
 import 'reflect-metadata';
 import { buildSchema } from 'type-graphql';
 import * as helmet from 'helmet';
+import * as cors from 'cors';
 import config from './config';
 import QuestionResolver from './resolvers/QuestionResolver';
 import ResultsResolver from './resolvers/ResultsResolver';
@@ -31,6 +32,7 @@ async function init() {
     schema,
   });
 
+  server.express.use(cors());
   server.express.use(helmet());
   server.express.enable('trust proxy');
   server.express.use(config.limiter);
