@@ -1,6 +1,6 @@
-import * as RateLimit from "express-rate-limit"
+const rateLimit = require('express-rate-limit');
 
-const { NODE_ENV, DATABASE_URI, PORT } = process.env
+const { NODE_ENV, DATABASE_URI, PORT } = process.env;
 
 interface Config {
   DATABASE_URI: any
@@ -14,15 +14,15 @@ interface Config {
 
 const config: Config = {
   DATABASE_URI,
-  limiter: new RateLimit({
+  limiter: rateLimit({
     windowMs: 15 * 60 * 1000,
-    max: 100
+    max: 100,
   }),
   options: {
     port: PORT,
-    endpoint: "/api",
-    playground: NODE_ENV === "development" ? "/playground" : false
-  }
-}
+    endpoint: '/api',
+    playground: NODE_ENV === 'development' ? '/playground' : false,
+  },
+};
 
-export default { ...config }
+export default { ...config };

@@ -1,11 +1,11 @@
-import { InputType, Field } from "type-graphql"
+import { InputType, Field } from 'type-graphql';
 
-import { Results } from "../schemas/Results"
-import { Axes } from "../schemas/Axes"
+import { Results } from '../schemas/Results';
+import { Axes } from '../schemas/Axes';
 
-@InputType({ description: "New results data input" })
+@InputType({ description: 'New results data input' })
 export default class ResultsInput implements Partial<Results> {
-  @Field(type => Axes)
+  @Field((type) => Axes)
   axes: Axes
 
   @Field()

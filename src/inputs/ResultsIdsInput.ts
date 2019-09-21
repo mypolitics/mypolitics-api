@@ -1,7 +1,7 @@
-import { InputType, Field } from "type-graphql"
+import { InputType, Field } from 'type-graphql';
 
-@InputType({ description: "Results ids input" })
+@InputType({ description: 'Results ids input' })
 export default class ResultsIdsInput {
-  @Field(type => [String])
+  @Field((type) => [String])
   resultsIds: string[]
 }

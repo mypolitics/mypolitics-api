@@ -1,20 +1,20 @@
-import { Int, Field, ObjectType } from "type-graphql"
-import { ObjectIdScalar } from "../scalars/ObjectId"
-import { ObjectId } from "mongodb"
-import { prop, Typegoose } from "typegoose"
-import * as mongoose from "mongoose"
+import { Int, Field, ObjectType } from 'type-graphql';
+import { ObjectId } from 'mongodb';
+import { prop, Typegoose } from 'typegoose';
+import * as mongoose from 'mongoose';
+import { ObjectIdScalar } from '../scalars/ObjectId';
 
-@ObjectType({ description: "Question data" })
+@ObjectType({ description: 'Question data' })
 export class Question extends Typegoose {
-  @Field(type => ObjectIdScalar)
+  @Field((type) => ObjectIdScalar)
   readonly _id: ObjectId
 
   @prop()
-  @Field(type => Int)
+  @Field((type) => Int)
   index: number
 
   @prop()
-  @Field(type => Int)
+  @Field((type) => Int)
   totalCount: number
 
   @prop()
@@ -30,15 +30,15 @@ export class Question extends Typegoose {
   category: string
 
   @prop()
-  @Field(type => [String])
+  @Field((type) => [String])
   affirmativeAnswerEffects: string[]
 
   @prop()
-  @Field(type => [String])
+  @Field((type) => [String])
   negativeAnswerEffects: string[]
 }
 
 export const QuestionModel = new Question().getModelForClass(Question, {
   existingMongoose: mongoose,
-  schemaOptions: { collection: "questions" }
-})
+  schemaOptions: { collection: 'questions' },
+});
