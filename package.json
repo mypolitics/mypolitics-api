@@ -1,7 +1,7 @@
 {
   "name": "mypolitics-api",
   "version": "1.0.0",
-  "description": "API for myPolitics political test",
+  "description": "API for the myPolitics political test",
   "main": "index.js",
   "scripts": {
     "lint": "tslint --project '.'",
