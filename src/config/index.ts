@@ -20,7 +20,7 @@ const config: Config = {
   }),
   options: {
     port: PORT,
-    endpoint: '/api',
+    endpoint: '/',
     playground: NODE_ENV === 'development' ? '/playground' : false,
   },
 };
