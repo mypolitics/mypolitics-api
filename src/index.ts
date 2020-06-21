@@ -35,7 +35,6 @@ async function init() {
   server.express.use(cors());
   server.express.use(helmet());
   server.express.enable('trust proxy');
-  server.express.use(config.limiter);
 
   server.start(config.options, ({ port, playground }) => console.log(
     `Server started, listening on port ${port} for incoming requests.
