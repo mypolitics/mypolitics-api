@@ -102,6 +102,7 @@ type Results {
   totalCount: Int!
   axes: Axes!
   additionDate: DateTime!
+  generated: Boolean
 }
 
 """Results ids input"""
@@ -113,4 +114,5 @@ input ResultsIdsInput {
 input ResultsInput {
   axes: AxesInput!
   additionDate: DateTime!
+  generated: Boolean = false
 }

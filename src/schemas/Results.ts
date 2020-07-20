@@ -22,6 +22,10 @@ export class Results extends Typegoose {
   @prop()
   @Field()
   additionDate: Date
+
+  @prop()
+  @Field((type) => Boolean, { defaultValue: false })
+  generated: boolean
 }
 
 export const ResultsModel = new Results().getModelForClass(Results, {

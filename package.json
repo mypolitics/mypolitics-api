@@ -23,7 +23,7 @@
     "mongodb": "^3.3.2",
     "mongoose": "^5.5.3",
     "reflect-metadata": "^0.1.13",
-    "type-graphql": "^0.17.2"
+    "type-graphql": "^0.17.6"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.24",

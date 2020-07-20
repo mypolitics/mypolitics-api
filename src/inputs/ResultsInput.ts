@@ -10,4 +10,7 @@ export default class ResultsInput implements Partial<Results> {
 
   @Field()
   additionDate: Date
+
+  @Field({ defaultValue: false })
+  generated: boolean
 }
