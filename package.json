@@ -21,7 +21,7 @@
     "graphql-yoga": "^1.17.4",
     "helmet": "^3.16.0",
     "mongodb": "^3.3.2",
-    "mongoose": "^5.5.3",
+    "mongoose": "^5.7.5",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^0.17.6"
   },
